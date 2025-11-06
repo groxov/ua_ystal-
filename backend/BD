@@ -1,0 +1,27 @@
+CREATE SCHEMA IF NOT EXISTS resource;
+
+CREATE TABLE IF NOT EXISTS resource.card (
+	id SERIAL PRIMARY KEY,
+	period VARCHAR(255) NOT NULL,
+	price VARCHAR(255) NOT NULL,
+	month VARCHAR(255) NOT NULL,
+	point_first VARCHAR(255) NOT NULL,
+	point_second VARCHAR(255) NOT NULL,
+	point_third VARCHAR(255) NOT NULL,
+	description VARCHAR(255) NOT NULL
+);
+
+TRUNCATE TABLE resource.card RESTART IDENTITY CASCADE;
+
+INSERT INTO resource.card (period, price, month, point_first, point_second, point_third, description) VALUES 
+('1 Month access', '$49', '/month', 'Full Access to Resources', 'Access to Blog', 'Access to News', 'On checkout you will be charged the total amount of $534 for the 6 month package.'),
+('1 Year Access', '$67', '/month', 'Full Access to Resources', 'Access to Blog', 'Access to News', 'On checkout you will be charged the total amount of $534 for the 6 month package.'),
+('Lifetime Access', '$89', '/month', 'Full Access to Resources', 'Access to Blog', 'Access to News', 'On checkout you will be charged the total amount of $534 for the 6 month package.');
+
+CREATE TABLE IF NOT EXISTS resource.purchases (
+    id SERIAL PRIMARY KEY,
+    card_id INTEGER NOT NULL,
+    period VARCHAR(255) NOT NULL,
+    price VARCHAR(255) NOT NULL,
+    purchase_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
