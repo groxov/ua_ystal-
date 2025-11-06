@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+    --font-montserrat: Montserrat, sans-serif;
+    --color-gray: #B8BDC9;
+    --color-orange: #F55F39;
+    --color-salad: #2BCA8B;
+    --color-graytext: #4D4D4D;
+    --color-purple: #252061;
+    --color-purple2: #352F77;
+    --color-purple3: #524B9A;
+    --color-bluecard: #183EB6;
+    --color-description: #9DA0AC;
+    --color-border: #E0E0E0;
+    --color-purple4: #1C1842;
+    --color-purple5: #ABA8CA;
+}
+.bg-header-img {
+    background-image: url('/src/Header/imgs/headerimg.png');
+}   
+.bg-header-block {
+    background-image: url('/src/Header/imgs/headerblockbg.png');
+}   
+.bg-main-block {
+    background-image: url('/src/Header/imgs/headerblockbg.png');
+}   
+.bg-card-section {
+    background-image: url('./Cardsection/imgs/cardbg.png');
+}
+
+.bg-footer-section {
+    background-image: url('./Cardsection/imgs/cardbg.png');
+}
+
+#root > section.w-full.h-\[1600px\].bg-purple2.bg-card-section > div > div > div:nth-child(2) > p:nth-child(1){
+    color: var(--color-salad);
+}
+
+#root > section.w-full.h-\[1600px\].bg-purple2.bg-card-section > div > div > div:nth-child(1) > p:nth-child(1){
+    color: var(--color-bluecard);
+}
+
+#root > section.w-full.h-\[1600px\].bg-purple2.bg-card-section > div > div > div:nth-child(3) > p:nth-child(1){
+    color: var(--color-bluecard);
+}
+
+
+.custom-check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.custom-check-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 8px;
+}
+.custom-check-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 11px;
+    background-image: url('./Cardsection/imgs/cardcheck.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.custom-check-list1 {
+    list-style: none;
+    padding-left: 0;
+}
+.custom-check-list1 li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 8px;
+}
+.custom-check-list1 li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url('./Search/imgs/listsearch.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
